@@ -1,0 +1,48 @@
+<div class="jumbotron">
+    <h1 class="display-4 text-center">Big Kahuna Burger</h1>
+    <div class="container text-center">
+        <h2>Get a Burger</h2>
+        <form class="create-form">
+
+            <div class="form-group">
+                <label for="ca"><strong>Signature Burgers:</strong></label>
+                <input type="text" id="ca" name="name">
+            </div>
+
+            <button type="submit">Order in:</button>
+        </form>
+    </div>
+</div>
+
+<div class="container">
+    <h1 class="text-center header">Wall O" Burgers</h1>
+    <div class="row">
+
+        <div class="col-5">
+            <h2 class="text-center">Order Up!!</h2>
+            <ul class="signature-burgers">
+                {{#each ready-burgers}}
+                {{#unless devoured}}
+                <div class="row">
+                    <h2 class="burger-name">{{this.burger_name}}</h2> <button data-id={{this.id}}
+                        class="float-right">Devour</button>
+                </div>
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-5">
+            <h2 class="text-center">Now that was one tasty burger!</h2>
+            <ul>
+                {{#each burgers}}
+                {{#if devoured}}
+                <div class="row">
+                    <h2 class="burger-name"{{this.burger_name}}</h2>
+                </div>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>

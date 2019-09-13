@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS tastyBurgers_DB;
+
+CREATE DATABASE tastyBurgers_DB;
