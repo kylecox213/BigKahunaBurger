@@ -21,11 +21,11 @@
         <div class="col-5">
             <h2 class="text-center">Order Up!!</h2>
             <ul class="signature-burgers">
-                {{#each ready-burgers}}
-                {{#unless devoured}}
+                {{#each ready}}
+                {{#unless consumed}}
                 <div class="row">
                     <h2 class="burger-name">{{this.burger_name}}</h2> <button data-id={{this.id}}
-                        class="float-right">Devour</button>
+                        class="float-right">Consume</button>
                 </div>
                 {{/unless}}
                 {{/each}}
@@ -35,8 +35,8 @@
         <div class="col-5">
             <h2 class="text-center">Now that was one tasty burger!</h2>
             <ul>
-                {{#each burgers}}
-                {{#if devoured}}
+                {{#each ready}}
+                {{#if consumed}}
                 <div class="row">
                     <h2 class="burger-name"{{this.burger_name}}</h2>
                 </div>

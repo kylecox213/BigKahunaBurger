@@ -14,7 +14,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware for setting up URL handling and JSON parsing
-app.use(express.urlencoded({ extended: false}));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // Setting up the static file directory in the public folder
@@ -25,8 +25,8 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Setting up API and HTML routes 
-require("./routes/htmlRoutes")(app);
-require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes.js")(app);
+require("./routes/apiRoutes.js")(app);
 
 // Sync models for sequelize and initializing the server
 db.sequelize.sync().then(function () {
