@@ -4,15 +4,13 @@ module.exports = function (app) {
 
     app.get("/", function (req, res) {
         db.Burger.findAll({
-            include: [db.Customer],
-            order: [["updatedAt", "DESC"]]
-        }).then(function (gotBurgers) {
-            console.log("dbBurgers: " + JSON.stringify(gotBurgers));
+        }).then(function (dbBurgers) {
+            console.log("dbBurgers: " + JSON.stringify(dbBurgers));
 
             let burgersReady = [];
             let burgersConsumed = [];
 
-            gotBurgers.forEach(index => {
+            dbBurgers.forEach(index => {
                 if (!index.consumed) {
                     burgersReady.push(index);
                 }

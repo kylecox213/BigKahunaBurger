@@ -3,7 +3,8 @@
 
 require("dotenv").config();
 const express = require("express");
-const exphbs = require("handle-bars");
+const exphbs = require("express-handlebars");
+
 const db = require("./models");
 
 //------------Definitions------------
@@ -25,8 +26,9 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Setting up API and HTML routes 
-require("./routes/htmlRoutes.js")(app);
-require("./routes/apiRoutes.js")(app);
+// Setting up API and HTML routes 
+require("./routes/apiRoutes.js") (app);
+require("./routes/htmlRoutes.js")( app);
 
 // Sync models for sequelize and initializing the server
 db.sequelize.sync().then(function () {

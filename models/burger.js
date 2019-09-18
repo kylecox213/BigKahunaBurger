@@ -6,15 +6,9 @@ module.exports = function (sequelize, DataTypes) {
         },
         consumed: {
             type: DataTypes.BOOLEAN,
-            defaultValue: false
+            defaultValue: false,
         }
     });
-    Burger.associate = function (models) {
-        Burger.belongsTo(models.Customer, {
-            foreignKey: {
-                allowNull: true
-            }
-        });
-    }
+
     return Burger;
 };

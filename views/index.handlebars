@@ -1,0 +1,73 @@
+<div id="container-wrapper">
+    <div class="container">
+        <div class="container-row">
+            <div class="container-column">
+                <img id="" src="">
+                <div id="app-title" class="welcome-customer text-center">
+                    <h1>Big Kahuna Burger</h1>
+                    <h3>Go on! And get yourself a burger!</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <h3>Signature Burgers: </h3>
+                <ul id="ready-list" class="list-group">
+                    {{#each ready}}
+                    <li data-id="{{this.id}}" class="list-group-item">
+                        <div class="row">
+                            <div class="col-7">{{this.burger_name}}</div>
+                            <div class="col-5">
+                                <button class="btn btn-warning float-right order">Order up!</button>
+                            </div>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+                <form>
+                    <div class="row">
+                        <div class="col-8">
+                            <label class="sr-only" for="burger-name">Create your own custom Kahuna Burger!</label>
+                            <input type="text" id="burger-name" class="form-control"
+                                placeholder="What kind of burger is that? ">
+                        </div>
+                        <div class="col-4">
+                            <button id="order-burger" class="btn btn-danger">Place an Order!</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-6" id="wall">
+                <h3>Local Signature Burgers: </h3>
+                <ul id="consumed-list" class="list-group">
+                    {{#each consumed}}
+                    <li data-id="{{this.id}}" class="list-group-item">
+                        <span style="font-weight:bold">{{this.burger_name}}</span>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!-- <div class="modal fade" id="error-modal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="error-title"></h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p id="error-text"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div> --}}
+
+<script src="/js/index.js"></script>
