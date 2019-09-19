@@ -5,13 +5,13 @@
                 <img id="" src="">
                 <div id="app-title" class="welcome-customer text-center">
                     <h1>Big Kahuna Burger</h1>
-                    <h3>Go on! And get yourself a burger!</h3>
+                    <h3 style="padding-top: 10px; padding-bottom: 20px;">Go on! And get yourself a burger!</h3>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-6">
-                <h3>Signature Burgers: </h3>
+                <h3 style="padding-bottom: 15px;">Signature Burgers: </h3>
                 <ul id="ready-list" class="list-group">
                     {{#each ready}}
                     <li data-id="{{this.id}}" class="list-group-item">
@@ -29,10 +29,10 @@
                         <div class="col-8">
                             <label class="sr-only" for="burger-name">Create your own custom Kahuna Burger!</label>
                             <input type="text" id="burger-name" class="form-control"
-                                placeholder="What kind of burger is that? ">
+                                placeholder="Name that burger!" style="margin-top: 20px; padding-right: 0px;">
                         </div>
                         <div class="col-4">
-                            <button id="order-burger" class="btn btn-danger">Place an Order!</button>
+                            <button id="order-burger" class="btn btn-danger" style="margin-top: 20px;">Create!</button>
                         </div>
                     </div>
                 </form>
