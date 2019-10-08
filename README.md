@@ -13,7 +13,7 @@ The application implements CRUD methods via the Sequelize ORM library. This app 
 
 ### Heroku Deployment 
 
-Big Kahuna Burger is deployed through Heroku which provides data persistence and the implementation of the MySQL configured **JAWSDB**. 
+**Big Kahuna Burger** is deployed through Heroku which provides data persistence and the implementation of the MySQL configured **JAWSDB**. 
 
 ### MySQL
 
