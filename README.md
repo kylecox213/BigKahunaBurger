@@ -1,10 +1,15 @@
-[Link to Deployed Link] (https://big-kahuna-burger1.herokuapp.com/)
+# Big Kahuna Burger
 
-Big Kahuna Burger is a full-stack web application that uses the Sequelize ORM library. The app provides users with the ability to customize a burger that will appear on a list of signature burgers. Once consumed, the burger appears on the list of custom-signature burgers.
+**Big Kahuna Burger** is a full-stack web application that uses the Sequelize ORM library. The app provides users with the ability to customize a burger that will appear on a list of signature burgers. Once consumed, the burger appears on the list of custom-signature burgers.
+
+<img src="assets/images/kahuna.png" alt="BigKahuna" title="Big Kahuna Burger screenshot">
 
 ## High Level Overview
 
-The app implements CRUD methods through the Sequelize ORM library. This app utilizes models that GET and POST data using validation checks. The Sequelize ORM allows the app to make assocaitions between data tables. Sequelize is also implemented for the configuration of the app for deployment on Heroku.
+The application implements CRUD methods via the Sequelize ORM library. This app utilizes models that GET and POST data using validation checks. The Sequelize ORM allows the application to make assocaitions between data tables. Sequelize is also implemented for the configuration of the application for deployment on Heroku.
+
+## Give it a shot
+[Link to Deployed Link] (https://big-kahuna-burger1.herokuapp.com/)
 
 ### Heroku Deployment 
 
